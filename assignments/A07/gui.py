@@ -37,6 +37,7 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
         Should return a URL like this, but replace the month, day, and year, filter, and airport with the values passed in.
         https://www.wunderground.com/history/daily/KCHO/date/2020-12-31
     """
+   
     current_month,current_day,current_year = currentDate('tuple')
     
     if not month:
@@ -47,8 +48,21 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
         year = current_year
     
     # Create the gui's layout using text boxes that allow for user input without checking for valid input
+
+    lmonth=[]
+    for i in range(12):
+        lmonth.append(i+1)
+
+    lDay=[]
+    for i in range(31):
+        lDay.append(i+1)
+
+    lyear=[]
+    for i in range(23):
+        lyear.append(i+2000)
+
     layout = [
-        [sg.Text('Month')],[sg.InputText(month)],
+        [sg.Text('Month')],[sg.InputText(month)],[sg.DropDown(lmonth)],
         [sg.Text('Day')],[sg.InputText(day)],
         [sg.Text('Year')],[sg.InputText(year)],
         [sg.Text('Code')],[sg.InputText()],
@@ -70,6 +84,7 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
     sg.popup('You entered', f"Month: {month}, Day: {day}, Year: {year}, Code: {code}, Filter: {filter}")
 
     # return the URL to pass to wunderground to get appropriate weather data
+
 
 if __name__=='__main__':
     buildWeatherURL()
