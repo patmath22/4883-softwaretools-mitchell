@@ -25,7 +25,7 @@ create subgraphs. Hence you will need to know the range of your allowable genera
 ## Imported
 
 The python code uses:
-+----------+
-| import graphviz |
-| import json   |
-+-----------+
+
+1. import graphviz 
+2. import json   
+
