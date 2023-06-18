@@ -1,0 +1,377 @@
+digraph {
+    node [shape=square]
+    {
+        rank=same
+        0 [label="Gustavus  Banfill" color=blue]
+        1 [label="Lowe  Dimond" color=blue]
+    }
+    {
+        rank=same
+        2 [label="Adrienne  Anmore" color=red]
+        3 [label="Lurleen  Quayle" color=red]
+        97 [label="Tedd  Grishaev" color=blue]
+        98 [label="Borden  Spelwood" color=blue]
+        99 [label="Conroy  Liepmann" color=blue]
+    }
+    {
+        rank=same
+        4 [label="Jannel  Heyns" color=red]
+        5 [label="Nerte  Witcomb" color=red]
+        69 [label="Birdie  Gribbell" color=red]
+        70 [label="Ginger  McFade" color=red]
+        71 [label="Mitchel  Aujouanet" color=blue]
+        72 [label="Donovan  Sorrowweaver" color=blue]
+        73 [label="Serge  Olliar" color=blue]
+        74 [label="Corny  Gallally" color=red]
+        75 [label="Nedda  Scotchbrook" color=red]
+        100 [label="Mallissa  Itzhayek" color=red]
+        101 [label="Janeen  Corns" color=red]
+        160 [label="Vallie  Auchterlonie" color=red]
+        161 [label="Ceil  Buglar" color=red]
+        162 [label="Kara-lynn  Twaite" color=red]
+        245 [label="Othelia  Keijser" color=red]
+    }
+    {
+        rank=same
+        6 [label="Hedi  Penbarthy" color=red]
+        7 [label="Diann  Tomankiewicz" color=red]
+        68 [label="Minne  MacAvaddy" color=red]
+        76 [label="Riannon  Girke" color=red]
+        77 [label="Faythe  Allum" color=red]
+        78 [label="Yetty  Collumbell" color=red]
+        79 [label="Corney  Lighterness" color=blue]
+        80 [label="Martyn  Mollitt" color=blue]
+        81 [label="Deina  Sellor" color=red]
+        82 [label="Goldia  McHaffy" color=red]
+        102 [label="Janetta  Nielson" color=red]
+        103 [label="Rhys  Grannell" color=blue]
+        104 [label="Stephani  McMurrugh" color=red]
+        141 [label="Bard  Gherardini" color=blue]
+        142 [label="Arty  Lavell" color=blue]
+        143 [label="Kellie  Chuney" color=red]
+        163 [label="Noby  Forsyde" color=blue]
+        164 [label="Marlyn  Pidon" color=red]
+        165 [label="Henryetta  Hackly" color=red]
+        178 [label="Raoul  Smithies" color=blue]
+        179 [label="Francine  Beaney" color=red]
+        214 [label="Hillyer  Constance" color=blue]
+        215 [label="Julina  Lappine" color=red]
+        233 [label="Berkeley  Barnsdale" color=blue]
+        234 [label="Emmey  O'Lehane" color=red]
+    }
+    {
+        rank=same
+        8 [label="Eyde  Warters" color=red]
+        9 [label="Hayden  Pudding" color=blue]
+        10 [label="Kurt  Kneafsey" color=blue]
+        11 [label="Nedda  Froome" color=red]
+        12 [label="Luciano  Shemelt" color=blue]
+        66 [label="Nola  Sharvill" color=red]
+        67 [label="Daven  Eberdt" color=blue]
+        83 [label="Emelda  Masurel" color=red]
+        84 [label="Cate  Biglin" color=red]
+        85 [label="Magdaia  Smewings" color=red]
+        86 [label="Quintin  Gabby" color=blue]
+        87 [label="Martie  Linder" color=red]
+        90 [label="Erek  Trass" color=blue]
+        91 [label="Valentin  Mushrow" color=blue]
+        105 [label="Berne  Aikett" color=blue]
+        106 [label="Timothee  Mingard" color=blue]
+        144 [label="Chet  Kaplin" color=blue]
+        145 [label="Tadio  Shimizu" color=blue]
+        146 [label="Mateo  Arnoll" color=blue]
+        158 [label="Saunders  Aucoate" color=blue]
+        159 [label="Tandie  Creek" color=red]
+        166 [label="Alberto  Tadd" color=blue]
+        167 [label="Heidi  Bernardot" color=red]
+        168 [label="Kissee  Sothern" color=red]
+        169 [label="Kanako  Tadd" color=red]
+        170 [label="Terrye  Robilliard" color=red]
+        171 [label="Chev  Clarage" color=blue]
+        176 [label="Laurel  Baldrey" color=red]
+        177 [label="Matthiew  Cowhig" color=blue]
+        180 [label="Cass  Gladhill" color=blue]
+        181 [label="Lurlene  Ikins" color=red]
+        197 [label="Effie  Crosthwaite" color=red]
+        198 [label="Kyrstin  Casol" color=red]
+        199 [label="Pattin  Pomfrett" color=blue]
+        200 [label="Cybill  Emons" color=red]
+        201 [label="Stephan  Capstick" color=blue]
+        202 [label="Bathsheba  Thomsson" color=red]
+        212 [label="Pryce  Biaggioli" color=blue]
+        213 [label="Graeme  Collum" color=blue]
+        216 [label="Glenda  Stuke" color=red]
+        217 [label="Draven  Millam" color=blue]
+        218 [label="Hobard  Hutchinson" color=blue]
+        230 [label="Celinda  Shilling" color=red]
+        235 [label="Pansie  Foster-Smith" color=red]
+        236 [label="Quincey  Straw" color=blue]
+    }
+    {
+        rank=same
+        13 [label="Maddalena  Fleis" color=red]
+        14 [label="Shell  Britney" color=blue]
+        29 [label="Dell  Daily" color=blue]
+        30 [label="Baryram  Lattin" color=blue]
+        64 [label="Coletta  Claremont" color=red]
+        65 [label="Cheslie  Brafferton" color=red]
+        88 [label="Joann  Smewing" color=red]
+        89 [label="Papageno  MacNeilage" color=blue]
+        92 [label="Orazio  Bogey" color=blue]
+        107 [label="Nedda  O'Canavan" color=red]
+        108 [label="Florance  Beadon" color=red]
+        114 [label="Laughton  Devout" color=blue]
+        115 [label="Gearard  Petworth" color=blue]
+        124 [label="Brita  Alonso" color=red]
+        125 [label="Luciana  Spellacy" color=red]
+        136 [label="Aloise  Lyptrit" color=red]
+        137 [label="Shannen  Penrith" color=red]
+        138 [label="Hermie  Pohls" color=blue]
+        139 [label="Caroline  Gonnelly" color=red]
+        147 [label="Roarke  Tillerton" color=blue]
+        148 [label="Jeramey  Rainbow" color=blue]
+        149 [label="Care  Hendrickson" color=blue]
+        155 [label="Brita  Aronowitz" color=red]
+        156 [label="Dominick  Sinncock" color=blue]
+        172 [label="Bank  Kaiser" color=blue]
+        173 [label="Claudetta  Orum" color=red]
+        182 [label="Boris  Levee" color=blue]
+        183 [label="Rayshell  Moores" color=red]
+        196 [label="Cathyleen  Duquesnay" color=red]
+        203 [label="Camellia  Barta" color=red]
+        219 [label="Ignatius  Bunch" color=blue]
+        220 [label="Alene  Otton" color=red]
+        221 [label="Tedi  Oakes" color=red]
+        237 [label="Hammad  McOrkill" color=blue]
+        238 [label="Ingmar  Blanshard" color=blue]
+    }
+    {
+        rank=same
+        15 [label="Reinhard  Bousler" color=blue]
+        16 [label="Mio  Sweeten" color=red]
+        31 [label="Patrick  Cowderoy" color=blue]
+        32 [label="Jilli  Mockett" color=red]
+        46 [label="Lynea  Bramley" color=red]
+        47 [label="Finn  Bennellick" color=blue]
+        63 [label="Dorette  Redparth" color=red]
+        109 [label="Borden  Reuther" color=blue]
+        110 [label="Marley  Reynard" color=red]
+        111 [label="Lonni  Guillotin" color=red]
+        116 [label="Egon  Aikett" color=blue]
+        117 [label="Alvie  Breeton" color=blue]
+        118 [label="Kaitlin  Cluitt" color=red]
+        119 [label="Jenni  Brummitt" color=red]
+        126 [label="Vonny  Hargess" color=red]
+        127 [label="Lindsay  Nuss" color=blue]
+        128 [label="Gisela  Surcombe" color=red]
+        150 [label="Elisha  Balthasar" color=red]
+        184 [label="Elonore  Duffill" color=red]
+        185 [label="Berrie  Faldoe" color=red]
+        189 [label="Clementina  Shafto" color=red]
+        190 [label="Cristobal  Raspel" color=blue]
+    }
+    {
+        rank=same
+        17 [label="Jasen  MacAughtrie" color=blue]
+        18 [label="Harriot  McClenaghan" color=red]
+        19 [label="Grissel  Eggerton" color=red]
+        27 [label="Tobi  Stoile" color=red]
+        33 [label="Roley  Ottosen" color=blue]
+        34 [label="Kaye  Senn" color=red]
+        35 [label="Natty  Langlois" color=blue]
+        43 [label="Anderea  Rushmer" color=red]
+        44 [label="Bernard  Lichfield" color=blue]
+        48 [label="Gabie  Smidmor" color=red]
+        49 [label="Markos  Holdforth" color=blue]
+        54 [label="Georgia  Hannay" color=red]
+        55 [label="Hugh  Vanezis" color=blue]
+        60 [label="Granthem  Feng" color=blue]
+        61 [label="Minna  Gostyke" color=red]
+        186 [label="Niles  Danielli" color=blue]
+    }
+    {
+        rank=same
+        20 [label="Kissee  Rippin" color=red]
+        21 [label="Bob  Doerffer" color=blue]
+        22 [label="Umi  Harris" color=red]
+        23 [label="Kora  Litel" color=red]
+        36 [label="Brett  Mattioli" color=red]
+        50 [label="Darill  Berresford" color=blue]
+        56 [label="Geraldine  Mc Gee" color=red]
+        57 [label="Lorita  Simononsky" color=red]
+    }
+    edge [dir=none]
+    1 -> 0
+    3 -> 2
+    5 -> 4
+    7 -> 6
+    12 -> 11
+    14 -> 13
+    16 -> 15
+    19 -> 18
+    30 -> 29
+    32 -> 31
+    35 -> 34
+    47 -> 46
+    49 -> 48
+    55 -> 54
+    75 -> 74
+    82 -> 81
+    87 -> 86
+    91 -> 90
+    99 -> 98
+    101 -> 100
+    104 -> 103
+    106 -> 105
+    108 -> 107
+    115 -> 114
+    125 -> 124
+    143 -> 142
+    146 -> 145
+    149 -> 148
+    162 -> 161
+    165 -> 164
+    171 -> 170
+    179 -> 178
+    181 -> 180
+    183 -> 182
+    185 -> 184
+    202 -> 201
+    215 -> 214
+    218 -> 217
+    234 -> 233
+    236 -> 235
+    edge [dir=forward]
+    1 -> 2
+    3 -> 4
+    5 -> 6
+    7 -> 8
+    7 -> 9
+    7 -> 10
+    7 -> 11
+    12 -> 13
+    14 -> 15
+    16 -> 17
+    16 -> 18
+    19 -> 20
+    19 -> 21
+    19 -> 22
+    19 -> 23
+    16 -> 27
+    12 -> 29
+    30 -> 31
+    32 -> 33
+    32 -> 34
+    35 -> 36
+    32 -> 43
+    32 -> 44
+    30 -> 46
+    47 -> 48
+    49 -> 50
+    47 -> 54
+    55 -> 56
+    55 -> 57
+    47 -> 60
+    47 -> 61
+    30 -> 63
+    12 -> 64
+    12 -> 65
+    7 -> 66
+    7 -> 67
+    5 -> 68
+    3 -> 69
+    3 -> 70
+    3 -> 71
+    3 -> 72
+    3 -> 73
+    3 -> 74
+    75 -> 76
+    75 -> 77
+    75 -> 78
+    75 -> 79
+    75 -> 80
+    75 -> 81
+    82 -> 83
+    82 -> 84
+    82 -> 85
+    82 -> 86
+    87 -> 88
+    87 -> 89
+    82 -> 90
+    91 -> 92
+    1 -> 97
+    1 -> 98
+    99 -> 100
+    101 -> 102
+    101 -> 103
+    104 -> 105
+    106 -> 107
+    108 -> 109
+    108 -> 110
+    108 -> 111
+    106 -> 114
+    115 -> 116
+    115 -> 117
+    115 -> 118
+    115 -> 119
+    106 -> 124
+    125 -> 126
+    125 -> 127
+    125 -> 128
+    106 -> 136
+    106 -> 137
+    106 -> 138
+    106 -> 139
+    101 -> 141
+    101 -> 142
+    143 -> 144
+    143 -> 145
+    146 -> 147
+    146 -> 148
+    149 -> 150
+    146 -> 155
+    146 -> 156
+    143 -> 158
+    143 -> 159
+    99 -> 160
+    99 -> 161
+    162 -> 163
+    162 -> 164
+    165 -> 166
+    165 -> 167
+    165 -> 168
+    165 -> 169
+    165 -> 170
+    171 -> 172
+    171 -> 173
+    165 -> 176
+    165 -> 177
+    162 -> 178
+    179 -> 180
+    181 -> 182
+    183 -> 184
+    185 -> 186
+    183 -> 189
+    183 -> 190
+    181 -> 196
+    179 -> 197
+    179 -> 198
+    179 -> 199
+    179 -> 200
+    179 -> 201
+    202 -> 203
+    179 -> 212
+    179 -> 213
+    162 -> 214
+    215 -> 216
+    215 -> 217
+    218 -> 219
+    218 -> 220
+    218 -> 221
+    215 -> 230
+    162 -> 233
+    234 -> 235
+    236 -> 237
+    236 -> 238
+    99 -> 245
+}
