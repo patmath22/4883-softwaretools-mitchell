@@ -5,6 +5,7 @@
 In this assignment we were tasked to create a family tree. We used python to generate the code for
 GraphVix. Then use GraphViz to produce the .svg file. First we created a smaller .json file to text out
 the FamTree.py code, after we got it working we replaced the json file with dwarf.json which was taken from
+
 Dr. Griffins GitHub repository. 
 
 ### Files
@@ -16,3 +17,15 @@ Dr. Griffins GitHub repository.
 |   3  | famTree.svg | Graph produced by GraphViz |
 | 4 | dwarf.json  | The json file that contains the data used in 1 |
 
+### Instructions
+
+The file dwarf.json is a dictionary file with several keywords. One in particular, the generation key, is used in the FamTree.py to
+create subgraphs. Hence you will need to know the range of your allowable generations. Make sure the file dwarf.json is included in the directory in which you are running FamTree.py
+
+## Imported
+
+The python code uses:
++----------+
+| import graphviz |
+| import json   |
++-----------+
