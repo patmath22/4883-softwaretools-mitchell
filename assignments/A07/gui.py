@@ -8,7 +8,8 @@ TODO:
     - The year drop down box should have the values ??-2023.
     - The filter drop down box should have the values 'daily', 'weekly', 'monthly'.
 """
-import PySimpleGUI as sg      
+import PySimpleGUI as sg  
+import json    
 
 def currentDate(returnType='tuple'):
     """ Get the current date and return it as a tuple, list, or dictionary.
@@ -63,11 +64,21 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
 
     filters=['Daily','Weekly','Monthly']
 
+    with open('airports-better.json') as f:
+        data=json.load(f)
+
+    aptcode=[]
+
+    for airport in data:
+        aptcode.append(airport['icao'])
+
+    
+
     layout = [
         [sg.Text('Month')],[sg.Combo(months,default_value=current_month)],
         [sg.Text('Day')],[sg.Combo(days,default_value=current_day)],
         [sg.Text('Year')],[sg.Combo(years,default_value=current_year)],
-        [sg.Text('Code')],[sg.InputText()],
+        [sg.Text('Code')],[sg.Combo(aptcode)],
         [sg.Text('Daily / Weekly / Monthly')],[sg.Combo(filters)],
         [sg.Submit(), sg.Cancel()]
     ]      
