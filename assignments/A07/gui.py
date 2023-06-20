@@ -49,28 +49,31 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
     
     # Create the gui's layout using text boxes that allow for user input without checking for valid input
 
-    lmonth=[]
+    months=[]
     for i in range(12):
-        lmonth.append(i+1)
+        months.append(i+1)
 
-    lDay=[]
+    days=[]
     for i in range(31):
-        lDay.append(i+1)
+        days.append(i+1)
 
-    lyear=[]
+    years=[]
     for i in range(23):
-        lyear.append(i+2000)
+        years.append(i+2000)
+
+    filters=['Daily','Weekly','Monthly']
 
     layout = [
-        [sg.Text('Month')],[sg.InputText(month)],[sg.DropDown(lmonth)],
-        [sg.Text('Day')],[sg.InputText(day)],
-        [sg.Text('Year')],[sg.InputText(year)],
+        [sg.Text('Month')],[sg.Combo(months,default_value=current_month)],
+        [sg.Text('Day')],[sg.Combo(days,default_value=current_day)],
+        [sg.Text('Year')],[sg.Combo(years,default_value=current_year)],
         [sg.Text('Code')],[sg.InputText()],
-        [sg.Text('Daily / Weekly / Monthly')],[sg.InputText()],
+        [sg.Text('Daily / Weekly / Monthly')],[sg.Combo(filters)],
         [sg.Submit(), sg.Cancel()]
     ]      
 
     window = sg.Window('Get The Weather', layout)    
+
 
     event, values = window.read()
     window.close()
@@ -79,11 +82,19 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
     day = values[1]
     year = values[2]
     code = values[3]
-    filter = [4]
+    filter =values[4]
+
+    print(values)
+    print(month)
+    print(day)
 
     sg.popup('You entered', f"Month: {month}, Day: {day}, Year: {year}, Code: {code}, Filter: {filter}")
 
     # return the URL to pass to wunderground to get appropriate weather data
+
+    base_url = "https://wunderground.com/history"
+    url = f"{base_url}/{filter}/{code}/{year}-{month}-{day}"
+    print(url)
 
 
 if __name__=='__main__':
