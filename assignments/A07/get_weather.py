@@ -11,7 +11,7 @@ from selenium import webdriver                          # used to render the web
 from seleniumwire import webdriver                      
 from selenium.webdriver.chrome.service import Service   # Service is only needed for ChromeDriverManager
 
-
+import gui
 import functools                                        # used to create a print function that flushes the buffer
 flushprint = functools.partial(print, flush=True)       # create a print function that flushes the buffer immediately
 
@@ -44,7 +44,9 @@ def asyncGetWeather(url):
 if __name__=='__main__':
 
     # Could be a good idea to use the buildWeatherURL function from gui.py
-    url = 'http://www.wunderground.com/history/daily/KCHO/date/2020-12-31'
+    #url = 'http://www.wunderground.com/history/daily/KCHO/date/2020-12-31'
+    url = gui.buildWeatherURL()
+
 
     # get the page source HTML from the URL
     page = asyncGetWeather(url)
@@ -53,7 +55,11 @@ if __name__=='__main__':
     soup = BeautifulSoup(page, 'html.parser')
     
     # find the appropriate tag that contains the weather data
-    history = soup.find('lib-city-history-observation')
+    tables = soup.find_all('table')
+    print(tables[0].text)
+
+    
+
 
     # print the parsed HTML
-    print(history.prettify())
+    #print(history.prettify())
