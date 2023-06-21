@@ -62,7 +62,7 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
     for i in range(23):
         years.append(i+2000)
 
-    filters=['Daily','Weekly','Monthly']
+    filters=['daily','weekly','monthly']
 
     with open('airports-better.json') as f:
         data=json.load(f)
@@ -104,8 +104,9 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
     # return the URL to pass to wunderground to get appropriate weather data
 
     base_url = "https://wunderground.com/history"
-    url = f"{base_url}/{filter}/{code}/{year}-{month}-{day}"
+    url = f"{base_url}/{filter}/{code}/date/{year}-{month}-{day}"
     print(url)
+    return(url)
 
 
 if __name__=='__main__':
