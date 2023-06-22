@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup                           # used to parse the HTML
 from selenium import webdriver                          # used to render the web page
 from seleniumwire import webdriver                      
 from selenium.webdriver.chrome.service import Service   # Service is only needed for ChromeDriverManager
-
+from rich import print
 import gui
 import functools                                        # used to create a print function that flushes the buffer
 flushprint = functools.partial(print, flush=True)       # create a print function that flushes the buffer immediately
@@ -27,18 +27,20 @@ def asyncGetWeather(url):
         """
         
         #change '/usr/local/bin/chromedriver' to the path of your chromedriver executable
-        service = Service(executable_path='/usr/local/bin/chromedriver')
+        #service = Service(executable_path='/usr/local/bin/chromedriver')
         options = webdriver.ChromeOptions()
         options.add_argument('--headless')
         
-        driver = webdriver.Chrome(service=service,options=options)  # run ChromeDriver
+        driver = webdriver.Chrome(options=options)  # run ChromeDriver
         flushprint("Getting page...")
         driver.get(url)                                             # load the web page from the URL
         flushprint("waiting 3 seconds for dynamic data to load...")
         time.sleep(3)                                               # wait for the web page to load
         flushprint("Done ... returning page source HTML")
         render = driver.page_source                                 # get the page source HTML
-        driver.quit()                                               # quit ChromeDriver
+        driver.quit() 
+        with open('table1.html','w') as f:
+              f.write(driver.page_source)                                                     # quit ChromeDriver
         return render                                               # return the page source HTML
     
 if __name__=='__main__':
@@ -49,17 +51,53 @@ if __name__=='__main__':
 
 
     # get the page source HTML from the URL
-    page = asyncGetWeather(url)
+    #page = asyncGetWeather(url)
 
+    with open('table.html',encoding='utf-8') as f:
+       page=  f.read()
     # parse the HTML
     soup = BeautifulSoup(page, 'html.parser')
     
     # find the appropriate tag that contains the weather data
     tables = soup.find_all('table')
-    print(tables[0].text)
+    #print(tables[1].text)
 
+    #tables = soup.find_all('table')
     
+    
+     
+    
+    # with open('table1.html') as f:
+    #      table = f.read()
+    #      soup = BeautifulSoup(table, 'html.parser')
+    
+    
+    
+# print(soup.prettify())
+# print(soup.text)
+    allData = []
+    keys=[]
 
+    head = soup.find_all('th')
+    rows = soup.find_all('tr')
+
+
+    for d in head:
+         key = d.text.strip().replace(' ','').replace('\n','')
+         keys.append(key)
+    
+    for row in rows: 
+        row = row.find_all('td')
+        data = []
+        for td in row:
+            # print(data.text.strip().replace(' ','').replace('\n',''))
+            # print("====================================")
+            data.append(td.text.strip().replace(' ','').replace('\n','').replace('\xa0',''))
+
+        dictionary = dict(zip(keys, data))
+        allData.append(dictionary)
+
+print(allData)
 
     # print the parsed HTML
     #print(history.prettify())

@@ -1,0 +1,49 @@
+
+var ftGUID_6804744="47744AE5BEC9D2";
+var ftConfID_6804744="30342492";
+var ftParams_6804744="ft_custom=28489456_4553335_345626078_178804007_&ftOBA=1&ft_agentEnv=0&ft_lat=%%TTD_LAT%%&ft_long=%%TTD_LONG%%&ft_referrer=https%3A%2F%2Fwww.wunderground.com%2Fhistory%2Fdaily%2FKCHO%2Fdate%2F2020-12-31&gdpr=0&us_privacy=${US_PRIVACY}&cachebuster=391197.9566318922&ft_section=__285780__285781__285782__&ft_keyword=__285780__285781__285782__";
+var ftKeyword_6804744="";
+var ftCustom_6804744="28489456_4553335_345626078_178804007_";
+var ftSection_6804744="__285780__285781__285782__";
+var ftSegment_6804744="w2b,wy4,s21,w30,adnr,ry3,ah1x,aanx,aig4,aixc,aixo,aj08,acqu_rontgt_2";
+var ftSegmentList_6804744=[{s:'w2b'},{s:'wy4'},{s:'s21'},{s:'w30'},{s:'adnr'},{m:'dlldvus',s:'ry3',t:47740000},{s:'ah1x'},{s:'aanx',t:51860000},{s:'aig4'},{s:'aixc'},{s:'aixo',t:53140137},{s:'aj08'},{m:'c14388_pros_acqu_rontgt',s:'acqu_rontgt_2'}];
+var ftRuleMatch_6804744="0";
+var ftTimestamp_6804744="1687366910";
+var ftGeoC2_6804744="us";
+var ftGeoState_6804744="tx";
+var ftGeoCity_6804744="wichita falls";
+var ftISP_6804744="charter communications";
+var ftSpeed_6804744="cable";
+var ftConnType_6804744="wifi";
+var ftDMA_6804744="627";
+var ftLong_6804744="-98.54";
+var ftLat_6804744="33.87";
+var ftPostal_6804744="76308";
+var ftTimeZone_6804744="-500";
+var ftMobileCarrier_6804744="";
+var ftImp6804744 = {};
+ftImp6804744.privacy = "x";
+ftImp6804744.guidAge = "876";
+ftImp6804744.impID = "B6415A85-93BF-75D9-0718-9C3F2BF53B7C";
+ftImp6804744.duid = "FT:47744AE5BEC9D2";
+
+ftImp6804744.ft_tpplid = "";
+ftImp6804744.ft_c = {};
+ftImp6804744.gdpr = "0";
+ftImp6804744.gdpr_consent = "";
+ftImp6804744.gdpr_pd = "";
+ftImp6804744.oob_consent = "";
+ftImp6804744.gdprStoredConsent = "";
+ftImp6804744.us_privacy = "!!US_PRIVACY!";
+
+ftImp6804744.jsAppend = "1";
+(function(){
+    var tag = document.getElementById('ft_servedby_6804744') || (function(s){
+    	return s[s.length-1];
+    }(document.getElementsByTagName('script'))),
+           js = document.createElement('script');
+    js.src =
+"https://cdn.flashtalking.com/xre/680/6804744/4335769/js/j-6804744-4335769.js";
+    js.id = "ftscript_m6804744";
+    tag.parentNode.insertBefore(js, tag);
+}());

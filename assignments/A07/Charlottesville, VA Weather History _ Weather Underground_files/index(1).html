@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://cdn.flashtalking.com/173282/4150508/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <style></style><style>
+        ft-richload {
+            width: 728px;
+            height: 90px;
+        }
+
+        #clickTagDiv {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 728px;
+            height: 90px;
+            cursor: pointer;
+            z-index: 2;
+            visibility: hidden;
+        }
+
+        #main_rl {
+            width: 728px;
+            height: 90px;
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+
+        #static {
+            width: 728px;
+            height: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <ft-richload name="main_rl"><template shadowrootmode="open"><iframe frameborder="0" scrolling="no" margin="0" allowtransparency="true" allowfullscreen="" webkitallowfullscreen="" name="main_rl" style="width: 100%; height: 100%;"></iframe></template></ft-richload>
+    <div id="clickTagDiv"></div>
+    <script src="./html5API.js.download"></script>
+    <script src="./dlitetracker.js.download"></script>
+    <script>myFT.on('instantads', function () { var clickTagDiv = myFT.$("#clickTagDiv"); if (myFT.instantAds.use_static_image.toLowerCase() == "true") { var staticImage = new Image(); staticImage.src = myFT.instantAds.dynamic_static_image; staticImage.id = "static"; clickTagDiv[0].appendChild(staticImage); clickTagDiv[0].style.visibility = "visible"; myFT.applyClickTag(clickTagDiv, 1, myFT.instantAds.clickTag1_url); } else { document.getElementsByTagName("ft-richload")[0].name = "main_rl"; if (myFT.instantAds.wrap_clickTag.toLowerCase().replace(/ /g, '') == "true") { clickTagDiv[0].style.visibility = "visible"; myFT.applyClickTag(clickTagDiv, 1, myFT.instantAds.clickTag1_url) } } });</script>
+
+
+</body></html>

@@ -1,0 +1,93 @@
+var scriptTag = document.getElementById('bx-tag');
+
+/**
+ * @description Get the value of a URL hash key
+ * @param {string} name - The name to find in the url hash
+ * @returns {string|undefined} The url has as a string
+ */
+function getHashParam(name) {
+  var matches = window.location.hash.match(new RegExp(name + '=([^&]*)'));
+  return matches ? matches[1] : '';
+}
+
+/**
+ * @description Denotes if the script is running in a friendly or unfriendly
+ * iframe
+ * @returns {boolean} -
+ */
+function canReachTopWindow() {
+  // @ts-ignore
+  try { return window.top.document && true; } catch (e) { }
+  return false;
+}
+
+/**
+ * @description Creates an impression pixel
+ * @returns {HTMLImageElement|undefined} The image element that was created or undefined
+ * if no image element was created
+ */
+function createImpressionPixel() {
+  // @ts-ignore
+  const { searchParams } = new URL(scriptTag.src);
+  const imageUrlSource = searchParams.get('bx_tracker');
+
+  if (imageUrlSource === null || imageUrlSource === '') {
+    return;
+  }
+
+  const image = document.createElement('img');
+  image.style.display = 'none';
+  image.src = imageUrlSource;
+
+  scriptTag?.after(image);
+
+  return image;
+
+}
+
+/**
+ * @description
+ * @param {string|null} filePath -
+ * @param {string|null} websiteId -
+ */
+function addIframeBuster(filePath, websiteId) {
+  var iframe = document.createElement('iframe');
+  iframe.src = filePath + '#isIframeBuster=1&id=' + websiteId;
+  document.body.appendChild(iframe);
+}
+
+/**
+ * @description Adds the tag to the page
+ * @param {string | null} websiteId - The current site's website ID
+ */
+function addTag(websiteId) {
+  // @ts-ignore
+  var doc = window.top.document;
+
+  var script = doc.createElement('script');
+  script.src = doc.location.protocol + '//tag.bounceexchange.com/' + websiteId + '/i.js';
+  script.async = true;
+
+  // @ts-ignore
+  doc.getElementsByTagName('head')[0].appendChild(script);
+
+}
+
+/**
+ * ADS-2098
+ * createImpressionPixel();
+ */
+
+if (!!getHashParam('isIframeBuster')) {
+  // @ts-ignore
+  addTag(getHashParam('id'));
+} else if (scriptTag) {
+  var websiteId = scriptTag.getAttribute('data-website-id');
+  var iframeBusterPath = scriptTag.getAttribute('data-buster-path');
+
+  if (canReachTopWindow()) {
+    addTag(websiteId);
+  } else {
+    addIframeBuster(iframeBusterPath, websiteId);
+  }
+}

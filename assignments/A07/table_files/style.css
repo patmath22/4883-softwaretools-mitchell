@@ -1,0 +1,87 @@
+/* ----- General Element Styles ----- */
+
+body {
+	margin: 0
+}
+
+#viewport {
+	position: absolute;
+	overflow: hidden;
+	background-color: white;
+	top: 50%;
+	left: 50%;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#border {
+	pointer-events: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid black
+}
+
+.adSize {
+	width: 728px;
+	height: 90px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+#click_tag {
+	cursor: pointer;
+}
+
+/* ------ Banner Elements ----- */
+
+#f1_bg{
+	background: no-repeat url("img/f1_bg.jpg");
+	background-size: contain;
+}
+#f1_logo1 {
+	background: no-repeat url("img/f1_logo1.png");
+	background-size: contain;
+}
+#f1_logo2 {
+	background: no-repeat url("img/f1_logo2.png");
+	background-size: contain;
+}
+#f1_copy {
+	background: no-repeat url("img/f1_copy.png");
+	background-size: contain;
+}
+#f2_copy {
+	background: no-repeat url("img/f2_copy.png");
+	background-size: contain;
+}
+#f3_copy {
+	background: no-repeat url("img/f3_copy.png");
+	background-size: contain;
+}
+#f4_copy {
+	background: no-repeat url("img/f4_copy.png");
+	background-size: contain;
+}
+
+#f3_prod {
+	background: no-repeat url("img/f3_prod.jpg");
+	background-size: contain;
+}
+#f4_prod {
+	background: no-repeat url("img/f4_prod.jpg");
+	background-size: contain;
+}
+#f4_cta {
+	background: no-repeat url("img/f4_cta.png");
+	background-size: contain;
+}
+
+/* ----- Template ----- */
+
+/* # {
+	background: no-repeat url("img/.png");
+	background-size: contain;
+} */

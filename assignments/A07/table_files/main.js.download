@@ -1,0 +1,78 @@
+
+// ----- Banner Animation Frames -->
+
+//-- frame 1 -->
+
+function frameOne() {
+	gsap.set([f1_copy], {opacity:1})
+	var tl = new TimelineMax({});
+
+	tl
+	.from(f1_copy, .8, {opacity: 0, x: -20, ease: Power3.easeOut}, 'sync')
+	
+	gsap.delayedCall(2, frameTwo)
+}
+
+//-- frame 2 -->
+
+function frameTwo() {
+	gsap.set([f2_copy], {opacity: 1});
+	var tl = new TimelineMax();
+		
+	tl
+	.to(f1_copy, 1, {opacity: 0, y: 50, ease: Power3.easeInOut}, 'sync')
+	.from(f2_copy, 1, {opacity: 0, x: -90, ease: Power3.easeOut}, 'sync1-=.5')
+	
+	gsap.delayedCall(2.5, frameThree)
+
+}
+
+//-- frame 3 -->
+
+function frameThree() {
+	gsap.set([f3_prod], {opacity: 1});
+	gsap.set([f3_copy], {opacity: 1});
+
+	var tl = new TimelineMax();
+
+	tl
+	.to(f2_copy, 1, {opacity: 0, y: 90, ease: Power3.easeInOut})
+	.from(f3_copy, 1, {opacity: 0, x: -30, ease: Power3.easeInOut}, '-=.5')
+	
+	.from(f3_prod, 1, {opacity: 0, ease: Power2.easeInOut}, '-=.5')
+	
+
+	gsap.delayedCall(3, frameFour)
+
+}
+
+//-- frame 4 -->
+	
+function frameFour() {
+	gsap.set([f4_copy, f4_prod, f4_cta], {opacity: 1});
+	var tl = new TimelineMax();
+
+	tl
+	.to([f3_copy], 0.5, {opacity: 0, ease: Power2.easeInOut}, 'sync')
+	.from(f4_prod, 1, {opacity: 0, ease: Power2.easeInOut}, 'sync1')
+	.from(f4_copy, 1, {opacity: 0, x: -10, ease: Power2.easeInOut}, 'sync1')
+	.from(f4_cta, 1, {opacity: 0,  x: -30, ease: Power2.easeOut}, '-=.2')
+
+}
+
+// Banner Global Variables -->
+	var banner = {};
+	banner.click_tag = document.getElementById("click_tag")
+	banner.viewport = document.getElementById("viewport")
+
+// Init -->
+	function init() {
+		TweenMax.to([viewport, border, f1_bg, f1_logo1, f1_logo2], .2, { opacity: 1, onComplete: frameOne})
+		TweenMax.set([banner.viewport], {xPercent: -50, yPercent: -50})
+	}
+
+// ----- Template Snippets ----->
+
+// TweenMax.set(element, {clip:"rect(0px 300px, 0px, 0px)"})
+
+

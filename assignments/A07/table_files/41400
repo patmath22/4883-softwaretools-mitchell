@@ -1,0 +1,44 @@
+var bk_results = {
+	"campaigns": [
+		{
+			"campaign": 285782,
+			"timestamp": 1687366640,
+			"BluekaiAudienceName": "3 | HHI $125K+ ",
+			"BKUserID": "SKrr1PwP999PN7o4",
+			"categories": [
+				{
+					"categoryID": 25052,
+					"timestamp": 1686851117
+				}
+			]
+		},
+		{
+			"campaign": 285781,
+			"timestamp": 1687366640,
+			"BluekaiAudienceName": "3 | HHI $60-125K",
+			"BKUserID": "SKrr1PwP999PN7o4",
+			"categories": [
+				{
+					"categoryID": 5732,
+					"timestamp": 1686851117
+				},
+				{
+					"categoryID": 5734,
+					"timestamp": 1686493164
+				}
+			]
+		},
+		{
+			"campaign": 285780,
+			"timestamp": 1687366640,
+			"BluekaiAudienceName": "3 | HHI \u003c$60K",
+			"BKUserID": "SKrr1PwP999PN7o4",
+			"categories": [
+				{
+					"categoryID": 5731,
+					"timestamp": 1684043519
+				}
+			]
+		}
+	]
+};
