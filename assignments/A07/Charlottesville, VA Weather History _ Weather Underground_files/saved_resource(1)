@@ -1,50 +1,0 @@
-
-var ftGUID_7213182="47744AE5BEC9D2";
-var ftConfID_7213182="30449082";
-var ftParams_7213182="ft_custom=__AP1_db_dv_ABAjH0jlAy7eXa9aJYaXe4LzZlU7PA___19684778823&ftOBA=1&ft_domain=www.wunderground.com&ft_ifb=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2Fwww.wunderground.com%2F&us_privacy=${US_PRIVACY}&cachebuster=815749.4040151103&ft_dv=%5B%25ft_dv%25%5D&ft_keyword=19684778823&ft_section=19684778823&ft_c3=AD1EzRQAAABoCmAKDAgAFQAAAAAdAAAAABIMCAAVAAAAAB0AAAAAIhMIx8a3qkmoArrRnwKwAt_B_eEDQAHSAioYASITCIG9zKmh0_8CFUQ1TwgddDkEVSgBMAE4_6m2vf8QQAJIAliIgSAQl9yR4gF-4Ymcx2cH9_1symaxJzB3";
-var ftKeyword_7213182="19684778823";
-var ftCustom_7213182="__AP1_db_dv_ABAjH0jlAy7eXa9aJYaXe4LzZlU7PA___19684778823";
-var ftSection_7213182="19684778823";
-var ftSegment_7213182="w2b,wy4,s21,w30,adnr,ry3,ah1x,aanx,aig4,aixc,aixo,aj08,acqu_rontgt_2";
-var ftSegmentList_7213182=[{s:'w2b'},{s:'wy4'},{s:'s21'},{s:'w30'},{s:'adnr'},{m:'dlldvus',s:'ry3',t:47740000},{s:'ah1x'},{s:'aanx',t:51860000},{s:'aig4'},{s:'aixc'},{s:'aixo',t:53140137},{s:'aj08'},{m:'c14388_pros_acqu_rontgt',s:'acqu_rontgt_2'}];
-var ftRuleMatch_7213182="00010000";
-var ftTimestamp_7213182="1687312708";
-var ftGeoC2_7213182="us";
-var ftGeoState_7213182="tx";
-var ftGeoCity_7213182="wichita falls";
-var ftISP_7213182="att internet services";
-var ftSpeed_7213182="xdsl";
-var ftConnType_7213182="wifi";
-var ftDMA_7213182="627";
-var ftLong_7213182="-98.49";
-var ftLat_7213182="33.87";
-var ftPostal_7213182="76302";
-var ftTimeZone_7213182="-500";
-var ftMobileCarrier_7213182="";
-var ftImp7213182 = {};
-ftImp7213182.privacy = "x";
-ftImp7213182.guidAge = "876";
-ftImp7213182.impID = "5F376DF7-565F-E20D-3AC7-DED8CD0C7435";
-ftImp7213182.duid = "FT:47744AE5BEC9D2";
-
-ftImp7213182.ft_tpplid = "";
-ftImp7213182.ft_c = {};
-ftImp7213182.ft_c.ft_c3 = "AD1EzRQAAABoCmAKDAgAFQAAAAAdAAAAABIMCAAVAAAAAB0AAAAAIhMIx8a3qkmoArrRnwKwAt_B_eEDQAHSAioYASITCIG9zKmh0_8CFUQ1TwgddDkEVSgBMAE4_6m2vf8QQAJIAliIgSAQl9yR4gF-4Ymcx2cH9_1symaxJzB3";
-ftImp7213182.gdpr = "";
-ftImp7213182.gdpr_consent = "";
-ftImp7213182.gdpr_pd = "";
-ftImp7213182.oob_consent = "";
-ftImp7213182.gdprStoredConsent = "";
-ftImp7213182.us_privacy = "!!US_PRIVACY!";
-
-ftImp7213182.jsAppend = "1";
-(function(){
-    var tag = document.getElementById('ft_servedby_7213182') || (function(s){
-    	return s[s.length-1];
-    }(document.getElementsByTagName('script'))),
-           js = document.createElement('script');
-    js.src =
-"https://cdn.flashtalking.com/xre/721/7213182/4150508/js/j-7213182-4150508.js";
-    js.id = "ftscript_m7213182";
-    tag.parentNode.insertBefore(js, tag);
-}());

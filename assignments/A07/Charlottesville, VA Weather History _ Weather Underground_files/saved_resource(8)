@@ -1,50 +1,0 @@
-
-var ftGUID_7314680="47744AE5BEC9D2";
-var ftConfID_7314680="0";
-var ftParams_7314680="ftOBA=1&ft_agentEnv=0&ft_lat=33.87&ft_long=-98.49&ft_referrer=https%3A%2F%2Fwww.wunderground.com%2Fhistory%2Fdaily%2FKCHO%2Fdate%2F2020-12-31&gdpr=0&ft_c2=Other&ft_keyword=fnaocru&ft_partnerimpid=TD:68d6680b-72c3-4d58-b82c-11b4dc2edd4f&ft_partnerid=TD:dd3a5ce7-4f7d-4547-8efa-a45b9168c24c&ft_section=fnaocru&site_dealid=PZmdu&site_devicetype=PC&ft_idEnabled=0&site_advid=363301&site_cmpId=7hehln9&site_campaignid_int=3242098&site_creativeid=430otknd&site_creativeid_int=29598319&site_adformat=300x250&site_lineitem=15139600&pub_id=XRQMg9uC&sup_platform=sharethrough&cachebuster=452825.1379218533";
-var ftKeyword_7314680="";
-var ftCustom_7314680="";
-var ftSection_7314680="fnaocru";
-var ftSegment_7314680="w2b,wy4,s21,w30,adnr,ry3,ah1x,aanx,aig4,aixc,aixo,aj08,acqu_rontgt_2";
-var ftSegmentList_7314680=[{s:'w2b'},{s:'wy4'},{s:'s21'},{s:'w30'},{s:'adnr'},{m:'dlldvus',s:'ry3',t:47740000},{s:'ah1x'},{s:'aanx',t:51860000},{s:'aig4'},{s:'aixc'},{s:'aixo',t:53140137},{s:'aj08'},{m:'c14388_pros_acqu_rontgt',s:'acqu_rontgt_2'}];
-var ftRuleMatch_7314680="0";
-var ftTimestamp_7314680="1687312759";
-var ftGeoC2_7314680="us";
-var ftGeoState_7314680="tx";
-var ftGeoCity_7314680="wichita falls";
-var ftISP_7314680="att internet services";
-var ftSpeed_7314680="xdsl";
-var ftConnType_7314680="wifi";
-var ftDMA_7314680="627";
-var ftLong_7314680="-98.49";
-var ftLat_7314680="33.87";
-var ftPostal_7314680="76302";
-var ftTimeZone_7314680="-500";
-var ftMobileCarrier_7314680="";
-var ftImp7314680 = {};
-ftImp7314680.privacy = "x";
-ftImp7314680.guidAge = "876";
-ftImp7314680.impID = "9E2A3554-F4B1-8AF4-25F1-98FC6D763BE4";
-ftImp7314680.duid = "FT:47744AE5BEC9D2";
-
-ftImp7314680.ft_tpplid = "";
-ftImp7314680.ft_c = {};
-ftImp7314680.ft_c.ft_c2 = "Other";
-ftImp7314680.gdpr = "0";
-ftImp7314680.gdpr_consent = "";
-ftImp7314680.gdpr_pd = "";
-ftImp7314680.oob_consent = "";
-ftImp7314680.gdprStoredConsent = "";
-ftImp7314680.us_privacy = "";
-
-ftImp7314680.jsAppend = "1";
-(function(){
-    var tag = document.getElementById('ft_servedby_7314680') || (function(s){
-    	return s[s.length-1];
-    }(document.getElementsByTagName('script'))),
-           js = document.createElement('script');
-    js.src =
-"https://cdn.flashtalking.com/xre/731/7314680/4279419/js/j-7314680-4279419.js";
-    js.id = "ftscript_m7314680";
-    tag.parentNode.insertBefore(js, tag);
-}());

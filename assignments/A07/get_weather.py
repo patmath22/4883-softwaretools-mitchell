@@ -53,7 +53,7 @@ if __name__=='__main__':
     # get the page source HTML from the URL
     #page = asyncGetWeather(url)
 
-    with open('table.html',encoding='utf-8') as f:
+    with open('table2.html',encoding='utf-8') as f:
        page=  f.read()
     # parse the HTML
     soup = BeautifulSoup(page, 'html.parser')
@@ -78,8 +78,8 @@ if __name__=='__main__':
     allData = []
     keys=[]
 
-    head = soup.find_all('th')
-    rows = soup.find_all('tr')
+    head = tables[1].find_all('th')
+    rows = tables[1].find_all('tr')
 
 
     for d in head:
@@ -98,6 +98,21 @@ if __name__=='__main__':
         allData.append(dictionary)
 
 print(allData)
+stuff =[]        
+
+for row in allData:
+     if len(row)>0:
+          stuff.append(row)
+
+print("-----------------"*5)
+
+print(stuff[0].keys())  #returns column headers
+
+for row in stuff:
+    #  print(row['Time'])
+    for k,v in row.items():
+         print(k,v)     #to access value only print(v)
+
 
     # print the parsed HTML
     #print(history.prettify())
