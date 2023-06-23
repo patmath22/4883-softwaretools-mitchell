@@ -19,4 +19,4 @@ The program get_weather.py is hard coded and bypasses the scraping of the web. C
 The gui.py gets the airport codes from airports_better.json and produces a URL. 
 
 In the code there are instructions for removing the bypass. This is accomplished by merely commenting out two lines and uncommenting another. 
-
+UNCOMMENT LINE 59 AND COMMENT 61,62
