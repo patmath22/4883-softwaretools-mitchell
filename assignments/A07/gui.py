@@ -95,9 +95,9 @@ def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
     code = values[3]
     filter =values[4]
 
-    print(values)
-    print(month)
-    print(day)
+    #print(values)
+    #print(month)
+    #print(day)
 
     sg.popup('You entered', f"Month: {month}, Day: {day}, Year: {year}, Code: {code}, Filter: {filter}")
 

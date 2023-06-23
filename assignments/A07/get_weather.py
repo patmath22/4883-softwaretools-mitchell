@@ -1,7 +1,10 @@
 """
 Overview:
 This program uses Selenium to render a web page and then uses BeautifulSoup to parse the HTML.
-The program then prints the parsed HTML to the console.
+This version of the program has the code for scraping data from a particular web site. To see the program run 
+more efficiently, asyncGetWeather() was envoked earlier and the data was cleaned and placed in the file:
+table2.html
+
 """
 
 import time                                             # needed for the sleep function
@@ -12,6 +15,7 @@ from seleniumwire import webdriver
 from selenium.webdriver.chrome.service import Service   # Service is only needed for ChromeDriverManager
 from rich import print
 import gui
+#import PySimpleGUI as sg
 import functools                                        # used to create a print function that flushes the buffer
 flushprint = functools.partial(print, flush=True)       # create a print function that flushes the buffer immediately
 
@@ -45,36 +49,31 @@ def asyncGetWeather(url):
     
 if __name__=='__main__':
 
-    # Could be a good idea to use the buildWeatherURL function from gui.py
+    # The following code calls the function buildWeatherURL() from gui.py
     #url = 'http://www.wunderground.com/history/daily/KCHO/date/2020-12-31'
     url = gui.buildWeatherURL()
 
-
-    # get the page source HTML from the URL
+    # Here we have commented out the call to asyncGetWeather(url)
+    # The information contained in the url listed on line 52 is placed in table2.html
+    # TO RUN THE PROGRAM FROM THE URL GIVEN FROM THE GUI, UNCOMMENT LINE 59 AND COMMENT 61,62
     #page = asyncGetWeather(url)
 
     with open('table2.html',encoding='utf-8') as f:
        page=  f.read()
+
     # parse the HTML
     soup = BeautifulSoup(page, 'html.parser')
     
     # find the appropriate tag that contains the weather data
     tables = soup.find_all('table')
-    #print(tables[1].text)
-
-    #tables = soup.find_all('table')
-    
+      
     
      
-    
-    # with open('table1.html') as f:
-    #      table = f.read()
-    #      soup = BeautifulSoup(table, 'html.parser')
+     
     
     
     
-# print(soup.prettify())
-# print(soup.text)
+
     allData = []
     keys=[]
 
@@ -97,22 +96,51 @@ if __name__=='__main__':
         dictionary = dict(zip(keys, data))
         allData.append(dictionary)
 
-print(allData)
+#print(allData)
 stuff =[]        
 
 for row in allData:
      if len(row)>0:
           stuff.append(row)
 
-print("-----------------"*5)
 
-print(stuff[0].keys())  #returns column headers
+
+tdata=[]
 
 for row in stuff:
     #  print(row['Time'])
-    for k,v in row.items():
-         print(k,v)     #to access value only print(v)
+    # for k,v in row.items():
+    #      tdata.append(v)     #to access value only print(v), to get both print(k,v)
+    tdata.append(list(row.values()))
+
+   
+   
+   
+#This code creates a GUI to display the scraped data
 
 
-    # print the parsed HTML
-    #print(history.prettify())
+import PySimpleGUI as psg
+psg.set_options(font=("Arial Bold", 10))
+#toprow = ['S.No.', 'Name', 'Age', 'Marks']
+
+toprow = list(stuff[0].keys())
+#rows = tdata
+tbl1 = psg.Table(values=tdata, headings=toprow,
+   display_row_numbers=False,
+   justification='center', key='-TABLE-',
+   selected_row_colors='red on yellow',
+   enable_events=True,
+   expand_x=True,
+   expand_y=True,
+ enable_click_events=True)
+layout = [[tbl1]]
+window = psg.Window("Table Demo", layout, size=(1000, 200), resizable=True)
+while True:
+   event, values = window.read()
+   print("event:", event, "values:", values)
+   if event == psg.WIN_CLOSED:
+      break
+   if '+CLICKED+' in event:
+      psg.popup("You clicked row:{} Column: {}".format(event[2][0], event[2][1]))
+window.close()
+
