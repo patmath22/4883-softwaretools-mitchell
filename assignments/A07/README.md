@@ -9,7 +9,7 @@ This project will combine several tools. We use python GUI to both enter a URL d
 |   #   | File            | Description                                        |
 | :---: | --------------- | -------------------------------------------------- |
 |   1   | [airports_better.json](airports_better.json)  | json file contain airport codes and other information     |
-|   2   | [get_weather.py](get_weather.py   | Code for scraping a web site      |
+|   2   | [get_weather.py](get_weather.py)   | Code for scraping a web site      |
 |   3  | [gui.py](gui.py) | This GUI generates the website URL |
 |  4 | [table2.html](table2.html) | contains information from a scrape of a particular site |
 
