@@ -9,5 +9,5 @@ In this assignment we use GraphViz to create a binary search tree. The nodes wer
 |   #   | File            | Description                                        |
 | :---: | --------------- | -------------------------------------------------- |
 |   1   | [bst.dot](bst.dot)         | contains the GraphViz commands      |
-|   2   | bst.svg         | This file is the graph produced by GraphViz      |
+|   2   | [bst.svg](bst.svg)         | This file is the graph produced by GraphViz      |
 
