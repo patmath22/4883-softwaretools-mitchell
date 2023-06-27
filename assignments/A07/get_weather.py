@@ -59,7 +59,7 @@ if __name__=='__main__':
     #page = asyncGetWeather(url)
 
     with open('table2.html',encoding='utf-8') as f:
-       page=  f.read()
+      page=  f.read()
 
     # parse the HTML
     soup = BeautifulSoup(page, 'html.parser')
