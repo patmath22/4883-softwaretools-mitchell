@@ -114,7 +114,7 @@ def getMinDeaths():
 
 def getdeathsCYR(country=None,minYear=None,maxYear=None):
     """
-    
+
     """
     global db
     deaths=0
@@ -272,7 +272,21 @@ async def min_death():
 
 @app.get("/death_country_daterange")
 async def death_country_daterange(country:str=None,minYear:int=None,maxYear:int=None):
-    print("doing it!")
+    """
+    This method will return a total deaths in a country for the time period given
+
+    -**Params:**
+
+        - Country (str) : Name of the country
+        - minYear (int) : Format YYYYMMDD
+        - maxYear (int) : Format YYYYMMDD
+
+    -**Returns:**
+
+        -(int) : Total number of deaths in that country during the period minYear to maxYear    
+    
+         
+    """
     return{"deaths":getdeathsCYR(country,minYear,maxYear)}
 
 
