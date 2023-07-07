@@ -12,3 +12,4 @@
 |   2   | [Assignment 05](/assignments/A05/README.md)   | Family Tree     |
 |   3  | [Assignment 06](/assignments/A06/README.md) |Software Tool Presentation |
 | 4 | [Assignment 07](/assignments/A07/README.md)  | Web Scraping|
+| 5 | [Assignment 08](/assignments/A08/README.md)  | Fast Api with Covid Data|

@@ -62,8 +62,17 @@ def getdeathC(country=None):
         if country.lower()==row[2].lower():
             deaths += int(row[6])
 
+    return deaths
+
+def getcasesC(country=None):
+    global db
+    deaths = 0 
+    for row in db:
+        if country.lower()==row[2].lower():
+            deaths += int(row[4])          
 
     return deaths
+
 def getdeathR(WHO_region=None):
     global db
     deaths = 0 
@@ -93,6 +102,10 @@ def getMaxDeaths():
 
   return (maxCountry, maxDeaths)
 
+
+
+
+
 def getMinDeaths():
   countries = getUniqueCountries()
   minCountry = None
@@ -113,9 +126,6 @@ def getMinDeaths():
 #Needs work below
 
 def getdeathsCYR(country=None,minYear=None,maxYear=None):
-    """
-
-    """
     global db
     deaths=0
     
@@ -130,7 +140,18 @@ def getdeathsCYR(country=None,minYear=None,maxYear=None):
     return deaths
 
 
+def getMaxDeathsRY(minYear=None,maxYear=None):
+  countries = getUniqueCountries()
+  maxCountry = None
+  maxDeaths = 0
 
+  for country in countries:
+    deaths = getdeathsCYR(country,minYear,maxYear)
+    if deaths > maxDeaths:
+      maxDeaths = deaths
+      maxCountry = country 
+
+  return (maxCountry, maxDeaths)
 
 
 def getUniqueCountries():
@@ -220,6 +241,13 @@ async def deaths_by_country(country:str=None):
     """
     return{"deaths":getdeathC(country)}
 
+@app.get("/cases_by_country/")
+async def cases_by_country(country:str=None):
+    """
+    Returns the number of cases in a particular country
+    """
+    return{"cases":getcasesC(country)}
+
 @app.get("/deaths_by_region/")
 async def deaths_by_region(WHO_region:str=None):
     """
@@ -289,6 +317,23 @@ async def death_country_daterange(country:str=None,minYear:int=None,maxYear:int=
     """
     return{"deaths":getdeathsCYR(country,minYear,maxYear)}
 
+@app.get("/max_death_RY")
+async def max_death_RY(minYear:int=None,maxYear:int=None):
+    """
+    This method will return the country with the maximum deaths for the time period given
+
+    -**Params:**
+
+        - minYear (int) : Format YYYYMMDD
+        - maxYear (int) : Format YYYYMMDD
+
+    -**Returns:**
+
+        -(int) : The country with the maximum deaths in the period minYear to maxYear    
+    
+         
+    """
+    return{"Max death and Country":getMaxDeathsRY(minYear,maxYear)}
 
 
     
