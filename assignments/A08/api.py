@@ -176,6 +176,16 @@ def getUniqueWhos():
    
     return list(whos.keys())
 
+def getMortR(country=None):
+    cases=getcasesC(country)
+    deaths=getdeathC(country)
+    if cases==0:
+        mort=0
+    else:
+        mort=deaths/cases
+    return(mort)
+
+
 @app.get("/")
 async def docs_redirect():
     """Api's base route that displays the information created above in the ApiInfo section."""
@@ -336,6 +346,21 @@ async def max_death_RY(minYear:int=None,maxYear:int=None):
     return{"Max death and Country":getMaxDeathsRY(minYear,maxYear)}
 
 
+@app.get("/mort_rate_country")
+async def mort_rate_country(country:str=None):
+    """
+    This method will return the mortality rate for a particular country.
+
+    -**Params:**
+
+        -country (str) : Country name
+
+    -**Returns:**
+
+        - decimal : the number of deaths divided by the number of cases
+
+    """
+    return{"mortality rate":getMortR(country)}
     
 
 
