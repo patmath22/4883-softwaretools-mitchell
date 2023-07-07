@@ -32,19 +32,19 @@ Instructions are given for each method. Click the down arrow for the method you 
 
 ### EndPoints and usage.
 
-# /countries/
+### /countries/
     - List of countries in the data
 
-# /whos/
+### /whos/
     - Lists the World Health Organization codes for the data
 
-# /casesByRegion/
+### /casesByRegion/
     -Returns the number of cases by region
 
-# /deaths/
+### /deaths/
     - This method will return the total number of death
 
-# /deaths_by_country_year/
+### /deaths_by_country_year/
     - This method will return a total death count for a country and year
 
     -Params:
@@ -55,16 +55,16 @@ Instructions are given for each method. Click the down arrow for the method you 
 
     -(int) : Total number of deaths in that country during that year
 
-# /deaths_by_country/
+### /deaths_by_country/
     - Returns the number of deaths in a particular country
 
-# /cases_by_country/
+### /cases_by_country/
     - Returns the number of cases in a particular country
 
-# /deaths_by_region/
+### /deaths_by_region/
     - This method will return a total death count for a WHO region
 
-# /deaths_by_region_year/
+### /deaths_by_region_year/
     - This method will return a total death count for a region and year
 
         -Params:
@@ -75,13 +75,13 @@ Instructions are given for each method. Click the down arrow for the method you 
 
             -(int) : Total number of deaths in that region during that year
 
-# /max_death
+### /max_death
     - This gives the country with the maximum deaths in the data
 
-# /min_death
+### /min_death
     - This give the country with the minimum deaths in the data
 
-# /death_country_daterange
+### /death_country_daterange
     - This method will return a total deaths in a country for the time period given
 
         -Params:
@@ -94,7 +94,7 @@ Instructions are given for each method. Click the down arrow for the method you 
 
             -(int) : Total number of deaths in that country during the period minYear to maxYear
 
-# /max_death_RY
+### /max_death_RY
     -This method will return the country with the maximum deaths for the time period given
 
         -Params:
@@ -105,7 +105,7 @@ Instructions are given for each method. Click the down arrow for the method you 
 
             -(int) : The country with the maximum deaths in the period minYear to maxYear
 
- #  /mort_rate_country  
+ ###  /mort_rate_country  
     -This method will return the mortality rate for a particular country.
 
         -Params:
